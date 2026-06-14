@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#1a2e28"/>
+  <rect x="60" y="80" width="300" height="200" rx="8" fill="#243832" stroke="#34a85a" stroke-opacity="0.3"/>
+  <rect x="400" y="100" width="340" height="160" rx="8" fill="#2a3f38"/>
+  <rect x="120" y="320" width="560" height="80" rx="6" fill="#1f3530"/>
+  <text x="400" y="460" text-anchor="middle" fill="#a3a3a3" font-family="Arial,sans-serif" font-size="18">Processing Unit  Replace with factory photo</text>
+</svg>

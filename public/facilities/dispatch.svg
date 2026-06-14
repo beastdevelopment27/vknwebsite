@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#1f2933"/>
+  <rect x="80" y="120" width="200" height="280" rx="6" fill="#334155"/>
+  <rect x="320" y="140" width="400" height="120" rx="6" fill="#475569"/>
+  <rect x="320" y="300" width="180" height="100" rx="6" fill="#34a85a" fill-opacity="0.2"/>
+  <text x="400" y="460" text-anchor="middle" fill="#a3a3a3" font-family="Arial,sans-serif" font-size="18">Dispatch &amp; Warehouse  Replace with photo</text>
+</svg>
