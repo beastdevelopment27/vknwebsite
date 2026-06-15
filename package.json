@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@base-ui/react": "^1.5.0",
     "@radix-ui/react-slot": "^1.2.5",
     "@tailwindcss/vite": "^4.3.1",
     "@tanstack/react-router": "^1.170.15",
@@ -17,10 +18,12 @@
     "clsx": "^2.1.1",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
+    "i18next": "^26.3.1",
     "lucide-react": "^1.18.0",
     "radix-ui": "^1.5.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-i18next": "^17.0.8",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.1"
   },

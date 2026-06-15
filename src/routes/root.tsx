@@ -1,6 +1,7 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router';
 import Header from '../Header/header.tsx';
 import Footer from '../Footer/Footer.tsx';
+import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 
 export const rootRoute = createRootRoute({
   component: () => (
@@ -10,6 +11,7 @@ export const rootRoute = createRootRoute({
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   ),
 });

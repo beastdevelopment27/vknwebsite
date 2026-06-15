@@ -1,0 +1,242 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "bulkOrders": "Bulk Orders",
+    "quality": "Quality",
+    "facilities": "Facilities",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "cta": {
+    "requestQuote": "Request Quote",
+    "contactSales": "Contact Sales",
+    "getQuote": "Get Quote",
+    "requestBulkQuote": "Request Bulk Quote",
+    "submitEnquiry": "Submit Enquiry",
+    "whatsappSales": "WhatsApp Sales",
+    "callNow": "Call Now"
+  },
+  "form": {
+    "name": "Name",
+    "companyName": "Company Name",
+    "phone": "Phone Number",
+    "email": "Email",
+    "quantity": "Required Quantity",
+    "message": "Message",
+    "requirement": "Requirement",
+    "namePlaceholder": "Your name",
+    "companyPlaceholder": "Business name",
+    "phonePlaceholder": "+91",
+    "emailPlaceholder": "you@company.com",
+    "quantityPlaceholder": "e.g. 500 bags / 5 tons",
+    "messagePlaceholder": "Delivery location, timeline, grade preference...",
+    "quoteTitle": "Request a Quote",
+    "quoteDesc": "Share your bulk requirement and our sales team will respond within 24 hours."
+  },
+  "home": {
+    "badge": "Premium Salem Sabudana Manufacturer",
+    "headline": "Salem's Trusted Sabudana Manufacturer",
+    "subheadline": "Supplying High-Quality Sabudana Across India With Reliable Production, Consistent Quality, and Bulk Supply Capacity.",
+    "whyBadge": "Why Choose Us",
+    "whyTitle": "Built for Bulk Buyers & Distributors",
+    "whyDesc": "Factory-direct supply with the scale, quality, and reliability that wholesale partners demand.",
+    "processBadge": "Our Process",
+    "processTitle": "Manufacturing Process",
+    "processDesc": "A controlled six-stage process ensuring consistent pearl sabudana quality.",
+    "statsBadge": "Production Scale",
+    "ctaTitle": "Ready to Place a Bulk Order?",
+    "ctaDesc": "Serving wholesalers, distributors, and exporters across India. Export enquiries welcome.",
+    "timelineBadge": "Our Journey",
+    "timelineTitle": "Four Decades of Manufacturing Excellence",
+    "testimonialsBadge": "Client Trust",
+    "testimonialsTitle": "Trusted by Wholesale Partners"
+  },
+  "why": {
+    "direct": { "title": "Direct Manufacturer", "desc": "Buy directly from our factory — no middlemen, better pricing and supply reliability." },
+    "quality": { "title": "Consistent Product Quality", "desc": "Standardized grading, moisture control, and batch-wise quality checks on every shipment." },
+    "bulk": { "title": "Bulk Supply Available", "desc": "Daily production capacity built for wholesalers, distributors, and institutional buyers." },
+    "dispatch": { "title": "Reliable Dispatch", "desc": "Organized loading bays and scheduled dispatch for domestic and export orders." },
+    "experience": { "title": "Industry Expertise", "desc": "Four decades of sabudana manufacturing expertise across Tamil Nadu markets." },
+    "pricing": { "title": "Competitive Pricing", "desc": "Factory-direct rates for bulk orders with transparent packaging and logistics." }
+  },
+  "process": {
+    "raw": { "title": "Raw Material Procurement", "desc": "Premium tapioca sourced and inspected on arrival." },
+    "processing": { "title": "Processing", "desc": "Extraction and pearl formation in controlled conditions." },
+    "drying": { "title": "Drying", "desc": "Industrial drying for uniform moisture and shelf stability." },
+    "inspection": { "title": "Quality Inspection", "desc": "Grading, sieving, and lab inspection before approval." },
+    "packaging": { "title": "Packaging", "desc": "45kg bulk bags and custom packs labeled per buyer specs." },
+    "dispatch": { "title": "Dispatch", "desc": "Loading, documentation, and on-time delivery." }
+  },
+  "stats": {
+    "years": "Years Experience",
+    "units": "Manufacturing Units",
+    "bags": "Bags Daily",
+    "capacity": "Production Capacity"
+  },
+  "products": {
+    "badge": "Our Product",
+    "title": "Premium Pearl Sabudana (Sago)",
+    "desc": "Factory-direct pearl sago for wholesale, retail repacking, and export. Available in 45kg packaging.",
+    "packaging45": "Available in 45kg Packaging",
+    "grades": "Available Grades",
+    "packaging": "Packaging Details",
+    "shipping": "Loading & Shipping",
+    "specs": "Product Specifications",
+    "highlights": "Product Highlights",
+    "feature1": "100% tapioca-based pearl sago",
+    "feature2": "Uniform pearl size & white color",
+    "feature3": "Controlled moisture for long shelf life",
+    "feature4": "Suitable for fasting & food industry use",
+    "gradePremium": "Premium Pearl",
+    "gradePremiumSize": "Large uniform pearls",
+    "gradePremiumUse": "Retail & premium outlets",
+    "gradeStandard": "Standard Pearl",
+    "gradeStandardSize": "Medium pearls",
+    "gradeStandardUse": "Wholesale & distributors",
+    "gradeEconomy": "Economy Grade",
+    "gradeEconomySize": "Mixed size pearls",
+    "gradeEconomyUse": "Bulk institutional supply",
+    "pack45": "45 kg bulk bags (standard)",
+    "packCustom": "Custom branding on request",
+    "packExport": "Export-ready palletized loads",
+    "packPallet": "Truck-load dispatch from Salem",
+    "ship1": "Daily dispatch from Salem, Tamil Nadu",
+    "ship2": "Transport arranged for bulk truck loads",
+    "ship3": "Export documentation support available",
+    "ship4": "Minimum order quantities apply — contact sales"
+  },
+  "bulk": {
+    "badge": "Bulk Orders",
+    "title": "B2B Sabudana Supply — Factory Direct",
+    "desc": "Dedicated bulk order page for wholesalers, distributors, food manufacturers, and export buyers.",
+    "capacity": "Production Capacity",
+    "capacityValue": "9 Tons Daily",
+    "capacityDesc": "Combined daily output of 9 tons across two units, with over 200 bags produced daily. Built for recurring bulk orders and long-term supply partnerships.",
+    "capacityDesc": "Combined daily output of 9 tons across two units, with over 200 bags produced daily. Built for recurring bulk orders and long-term supply partnerships.",
+    "packaging": "Packaging",
+    "packagingValue": "45kg Bags",
+    "buyers": "Buyer Categories",
+    "process": "Bulk Order Process",
+    "moq": "Minimum order quantities vary by grade. Contact sales for current MOQ.",
+    "viewProducts": "View Products"
+  },
+  "buyers": {
+    "wholesalers": "Wholesalers",
+    "distributors": "Distributors",
+    "manufacturers": "Food Manufacturers",
+    "exporters": "Exporters"
+  },
+  "bulkSteps": {
+    "1": { "title": "Submit Enquiry", "desc": "Share quantity, grade, and delivery location." },
+    "2": { "title": "Receive Quotation", "desc": "Get factory-direct pricing within 24 hours." },
+    "3": { "title": "Confirm Order", "desc": "Agree on packaging, payment, and dispatch date." },
+    "4": { "title": "Dispatch & Delivery", "desc": "Quality-approved batch loaded and delivered." }
+  },
+  "quality": {
+    "badge": "Quality Assurance",
+    "title": "Quality You Can Trust in Every Batch",
+    "desc": "Rigorous quality control from raw material to dispatch — built for buyers who cannot afford inconsistency.",
+    "workflow": "Quality Control Process",
+    "testing": "Testing & Inspection",
+    "checkpoints": "Quality Checkpoints",
+    "certified": "Certified Process",
+    "stages": "Manufacturing Stages Under QC",
+    "wf1": "Incoming raw material inspection",
+    "wf2": "In-process moisture monitoring",
+    "wf3": "Pearl size grading & sieving",
+    "wf4": "Final batch approval",
+    "wf5": "Packaging verification",
+    "wf6": "Dispatch documentation"
+  },
+  "qc": {
+    "moisture": { "title": "Moisture Testing", "desc": "Batch moisture testing for shelf stability and cooking quality." },
+    "grading": { "title": "Size Grading", "desc": "Pearl size and uniformity grading for premium and standard grades." },
+    "inspection": { "title": "Product Inspection", "desc": "Visual and line inspection for color, purity, and foreign matter." },
+    "packaging": { "title": "Packaging Standards", "desc": "Weight verification and seal integrity before dispatch." },
+    "batch": { "title": "Batch Verification", "desc": "Batch-wise documentation and traceability for every shipment." },
+    "lab": { "title": "Lab Testing", "desc": "Periodic lab analysis for compliance and buyer specifications." }
+  },
+  "facilities": {
+    "badge": "Our Facilities",
+    "title": "Two Production Units. One Reliable Supply Chain.",
+    "desc": "Integrated processing, grading, warehousing, and dispatch infrastructure built for bulk sabudana supply.",
+    "gallery": "Infrastructure Gallery",
+    "purpose": "Purpose",
+    "capacity": "Production Capacity",
+    "infrastructure": "Infrastructure",
+    "unit1": {
+      "title": "Primary Processing Unit",
+      "desc": "Core extraction, drying, and bulk production facility with dedicated machinery lines and storage.",
+      "infra1": "Extraction lines",
+      "infra2": "Drying chambers",
+      "infra3": "Raw material storage",
+      "infra4": "QC lab"
+    },
+    "unit2": {
+      "title": "Grading & Dispatch Unit",
+      "desc": "Pearl grading, packaging, warehouse storage, and dispatch operations for bulk and retail supply.",
+      "infra1": "Grading & sieving",
+      "infra2": "Packaging line",
+      "infra3": "Warehouse",
+      "infra4": "Loading bay"
+    }
+  },
+  "gallery": {
+    "factory": "Manufacturing Unit",
+    "machinery": "Processing Machinery",
+    "drying": "Drying Area",
+    "warehouse": "Warehouse Storage",
+    "storage": "Storage Facility",
+    "dispatch": "Loading & Dispatch",
+    "process": "Production Process"
+  },
+  "contact": {
+    "badge": "Contact Sales",
+    "title": "Get in Touch With Our Team",
+    "desc": "Bulk orders, distributor enquiries, and export requests — reach us directly.",
+    "companyAddress": "Company Address",
+    "factoryAddress": "Factory Address",
+    "map": "Google Maps"
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Four Decades of Sabudana Manufacturing Excellence",
+    "desc": "Vetrivel Sago Products and Kandhavel Sago Factory — two units, one commitment to quality bulk supply from Salem, Tamil Nadu.",
+    "story": "Our Story",
+    "storyP1": "What began as a family-led sago operation has grown into a professionally managed manufacturing group serving wholesalers and distributors across Tamil Nadu. Today we operate two dedicated production units with a combined daily capacity of 9 tons.",
+    "storyP2": "Our focus is simple: consistent pearl sago quality, reliable bulk dispatch, and long-term partnerships with buyers who depend on us every day.",
+    "atGlance": "At a Glance",
+    "glance1": "40+ years of sabudana manufacturing",
+    "glance2": "2 production units in Tamil Nadu",
+    "glance3": "200+ bags produced daily",
+    "glance4": "Factory-direct bulk supply"
+  },
+  "footer": {
+    "desc": "Salem's trusted bulk sabudana manufacturer. Factory-direct supply for wholesalers, distributors, and export buyers.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "address": "Address",
+    "rights": "All rights reserved."
+  },
+  "timeline": {
+    "1980s": { "year": "1980s", "title": "Foundation", "desc": "Kadhavel Sago Factory established in Salem region." },
+    "2000s": { "year": "2000s", "title": "Expansion", "desc": "Vetrivel Sago Products launched for scaled production." },
+    "today": { "year": "Today", "title": "2 Units", "desc": "9 tons daily capacity across two manufacturing units." },
+    "future": { "year": "Future", "title": "Growth", "desc": "Expanding export and nationwide distributor network." }
+  },
+  "testimonials": {
+    "1": { "quote": "Consistent quality and reliable bulk dispatch for our wholesale operations.", "author": "Wholesale Distributor, Tamil Nadu" },
+    "2": { "quote": "Factory-direct pricing and on-time delivery every month.", "author": "Food Industry Buyer, Karnataka" },
+    "3": { "quote": "Trusted partner for pearl sago supply across South India.", "author": "Regional Distributor" }
+  },
+  "seo": {
+    "home": { "title": "Salem Sabudana Manufacturer | Bulk Sago Supplier | Vetrivel Sago", "desc": "Premium Salem sabudana manufacturer. 40+ years, 2 units, 9 tons daily. Bulk supply for wholesalers, distributors & exporters." },
+    "products": { "title": "Pearl Sabudana Products | 45kg Packaging | Salem Sago", "desc": "Premium pearl sabudana in 45kg bags. Factory-direct bulk supply from Salem, Tamil Nadu." },
+    "bulk": { "title": "Bulk Sabudana Orders | Wholesale Sago Supplier", "desc": "Request bulk sabudana quote. 9 tons daily capacity, 45kg packaging. Wholesalers & exporters welcome." },
+    "quality": { "title": "Quality Assurance | Sabudana Manufacturing Standards", "desc": "Moisture testing, size grading, batch verification. Trusted sabudana quality from Salem manufacturer." },
+    "facilities": { "title": "Manufacturing Facilities | Salem Sago Factory", "desc": "Two production units with processing, drying, warehouse, and dispatch infrastructure." },
+    "contact": { "title": "Contact Sales | Salem Sabudana Manufacturer", "desc": "Contact Vetrivel Sago for bulk orders. Phone, WhatsApp, email. Salem, Tamil Nadu." },
+    "about": { "title": "About Us | 40+ Years Sabudana Manufacturing", "desc": "Four decades of sabudana manufacturing excellence in Salem, Tamil Nadu." }
+  }
+}

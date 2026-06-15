@@ -1,90 +1,71 @@
 export const company = {
   name: 'Vetrivel Sago Products & Kandhavel Sago Factory',
   shortName: 'VSP & KSF',
-  tagline: 'Premium Sabudana Manufacturer — Salem, Tamil Nadu',
+  tagline: 'Premium Salem Sabudana Manufacturer',
   phone: '+919876543210',
   phoneDisplay: '+91 98765 43210',
   whatsapp: '919876543210',
   email: 'info@vknskn.com',
   location: 'Salem, Tamil Nadu, India',
+  companyAddress: 'Vetrivel Sago Products, Salem, Tamil Nadu 636001, India',
+  factoryAddress: 'Kadhavel Sago Factory, Salem District, Tamil Nadu, India',
   mapEmbed:
     'https://maps.google.com/maps?q=Salem%2C%20Tamil+Nadu%2C%20India&z=11&output=embed',
 }
 
 export const heroStats = [
-  { value: '40+', label: 'Years Experience' },
-  { value: '2', label: 'Manufacturing Units' },
-  { value: '200+', label: 'Bags Produced Daily' },
-  { value: '9 Tons', label: 'Daily Capacity' },
-]
+  { value: '40+', labelKey: 'stats.years' },
+  { value: '2', labelKey: 'stats.units' },
+  { value: '200+', labelKey: 'stats.bags' },
+  { value: '9 Tons', labelKey: 'stats.capacity' },
+] as const
 
-export const whyChooseUs = [
-  {
-    title: 'Direct Manufacturer',
-    description: 'Buy directly from our factory — no middlemen, better pricing and supply reliability.',
-  },
-  {
-    title: 'Consistent Quality',
-    description: 'Standardized grading, moisture control, and batch-wise quality checks on every shipment.',
-  },
-  {
-    title: 'Bulk Supply Available',
-    description: 'Daily production capacity built for wholesalers, distributors, and institutional buyers.',
-  },
-  {
-    title: 'Reliable Dispatch',
-    description: 'Organized loading bays and scheduled dispatch for domestic and export orders.',
-  },
-  {
-    title: 'Industry Experience',
-    description: 'Four decades of sabudana manufacturing expertise across Tamil Nadu markets.',
-  },
-  {
-    title: 'Competitive Pricing',
-    description: 'Factory-direct rates for bulk orders with transparent packaging and logistics.',
-  },
-]
+export const whyChooseUsKeys = ['direct', 'quality', 'bulk', 'dispatch', 'experience', 'pricing'] as const
 
-export const processSteps = [
-  { step: '01', title: 'Raw Material', description: 'Premium tapioca sourced and inspected on arrival.' },
-  { step: '02', title: 'Processing', description: 'Extraction and pearl formation in controlled conditions.' },
-  { step: '03', title: 'Drying', description: 'Industrial drying for uniform moisture and shelf stability.' },
-  { step: '04', title: 'Quality Check', description: 'Grading, sieving, and lab inspection before approval.' },
-  { step: '05', title: 'Packaging', description: 'Bulk bags and retail packs labeled per buyer specs.' },
-  { step: '06', title: 'Dispatch', description: 'Loading, documentation, and on-time delivery.' },
-]
+export const processStepKeys = ['raw', 'processing', 'drying', 'inspection', 'packaging', 'dispatch'] as const
+
+export const bulkStepKeys = ['1', '2', '3', '4'] as const
+
+export const buyerKeys = ['wholesalers', 'distributors', 'manufacturers', 'exporters'] as const
+
+export const qcKeys = ['moisture', 'grading', 'inspection', 'packaging', 'batch', 'lab'] as const
+
+export const timelineKeys = ['1980s', '2000s', 'today', 'future'] as const
+
+export const testimonialKeys = ['1', '2', '3'] as const
 
 export const facilities = [
   {
     unit: 'Unit 1',
     name: 'Kadhavel Sago Factory',
-    title: 'Primary Processing Unit',
-    description:
-      'Core extraction, drying, and bulk production facility with dedicated machinery lines and storage.',
+    titleKey: 'facilities.unit1.title',
+    descKey: 'facilities.unit1.desc',
     image: '/facilities/processing.svg',
     capacity: '5 Tons / Day',
     area: 'Multi-acre campus',
-    infrastructure: ['Extraction lines', 'Drying chambers', 'Raw material storage', 'QC lab'],
+    infrastructureKeys: ['facilities.unit1.infra1', 'facilities.unit1.infra2', 'facilities.unit1.infra3', 'facilities.unit1.infra4'],
   },
   {
     unit: 'Unit 2',
     name: 'Vetrivel Sago Products',
-    title: 'Grading & Dispatch Unit',
-    description:
-      'Pearl grading, packaging, warehouse storage, and dispatch operations for bulk and retail supply.',
+    titleKey: 'facilities.unit2.title',
+    descKey: 'facilities.unit2.desc',
     image: '/facilities/dispatch.svg',
     capacity: '4 Tons / Day',
     area: 'Integrated facility',
-    infrastructure: ['Grading & sieving', 'Packaging line', 'Warehouse', 'Loading bay'],
+    infrastructureKeys: ['facilities.unit2.infra1', 'facilities.unit2.infra2', 'facilities.unit2.infra3', 'facilities.unit2.infra4'],
   },
 ]
 
-export const qualityChecks = [
-  { title: 'Moisture Control', description: 'Batch moisture testing to ensure shelf stability and cooking quality.' },
-  { title: 'Pearl Grading', description: 'Size and uniformity grading for premium and standard grades.' },
-  { title: 'Visual Inspection', description: 'Manual and line inspection for color, purity, and foreign matter.' },
-  { title: 'Lab Testing', description: 'Periodic lab analysis for compliance and buyer specifications.' },
-]
+export const facilityGallery = [
+  { key: 'factory', image: '/facilities/processing.svg' },
+  { key: 'machinery', image: '/carousel/factory.svg' },
+  { key: 'drying', image: '/carousel/sabudana.svg' },
+  { key: 'warehouse', image: '/facilities/dispatch.svg' },
+  { key: 'storage', image: '/carousel/products.svg' },
+  { key: 'dispatch', image: '/facilities/dispatch.svg' },
+  { key: 'process', image: '/products/sabudana-premium.svg' },
+] as const
 
 export const certifications = [
   'FSSAI Licensed',
@@ -94,14 +75,20 @@ export const certifications = [
 ]
 
 export const sabudanaGrades = [
-  { grade: 'Premium Pearl', size: 'Large uniform pearls', use: 'Retail & premium outlets' },
-  { grade: 'Standard Pearl', size: 'Medium pearls', use: 'Wholesale & distributors' },
-  { grade: 'Economy Grade', size: 'Mixed size pearls', use: 'Bulk institutional supply' },
+  { gradeKey: 'products.gradePremium', sizeKey: 'products.gradePremiumSize', useKey: 'products.gradePremiumUse' },
+  { gradeKey: 'products.gradeStandard', sizeKey: 'products.gradeStandardSize', useKey: 'products.gradeStandardUse' },
+  { gradeKey: 'products.gradeEconomy', sizeKey: 'products.gradeEconomySize', useKey: 'products.gradeEconomyUse' },
 ]
 
 export const packagingOptions = [
-  '25 kg bulk bags',
-  '50 kg bulk bags',
-  'Custom branding on request',
-  'Export-ready palletized loads',
+  'products.pack45',
+  'products.packCustom',
+  'products.packExport',
+  'products.packPallet',
 ]
+
+export const productFeatureKeys = ['products.feature1', 'products.feature2', 'products.feature3', 'products.feature4'] as const
+
+export const productShippingKeys = ['products.ship1', 'products.ship2', 'products.ship3', 'products.ship4'] as const
+
+export const qcWorkflowKeys = ['quality.wf1', 'quality.wf2', 'quality.wf3', 'quality.wf4', 'quality.wf5', 'quality.wf6'] as const
