@@ -8,11 +8,21 @@ type PageMetaProps = {
 
 const SITE_URL = 'https://vknskn.com'
 
+const LOCALE_MAP: Record<string, string> = {
+  en: 'en_IN',
+  ta: 'ta_IN',
+  hi: 'hi_IN',
+  te: 'te_IN',
+  kn: 'kn_IN',
+  ml: 'ml_IN',
+}
+
 export function PageMeta({ page, path = '/' }: PageMetaProps) {
   const { t, i18n } = useTranslation()
   const title = t(`seo.${page}.title`)
   const description = t(`seo.${page}.desc`)
   const url = `${SITE_URL}${path}`
+  const lang = i18n.language?.slice(0, 2) || 'en'
 
   useEffect(() => {
     document.title = title
@@ -31,7 +41,7 @@ export function PageMeta({ page, path = '/' }: PageMetaProps) {
     setMeta('og:title', title, 'property')
     setMeta('og:description', description, 'property')
     setMeta('og:url', url, 'property')
-    setMeta('og:locale', i18n.language === 'ta' ? 'ta_IN' : i18n.language === 'hi' ? 'hi_IN' : 'en_IN', 'property')
+    setMeta('og:locale', LOCALE_MAP[lang] ?? 'en_IN', 'property')
     setMeta('twitter:title', title)
     setMeta('twitter:description', description)
 

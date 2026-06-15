@@ -41,7 +41,6 @@ export default function Header() {
         </Link>
 
         <div className="ml-auto hidden items-center gap-5 md:flex">
-          <LanguageSwitcher />
           <nav className="flex items-center gap-5 text-sm text-white/80">
             {navLinks.map((link) => (
               <Link
@@ -59,10 +58,10 @@ export default function Header() {
           >
             {t('cta.getQuote')}
           </Link>
+          <LanguageSwitcher />
         </div>
 
         <div className="ml-auto flex items-center gap-2 md:hidden">
-          <LanguageSwitcher />
           <button
             type="button"
             aria-label={open ? 'Close menu' : 'Open menu'}
@@ -72,6 +71,7 @@ export default function Header() {
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
+          <LanguageSwitcher />
         </div>
       </div>
 
