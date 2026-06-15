@@ -4,7 +4,7 @@ export const company = {
   tagline: 'Premium Salem Sabudana Manufacturer',
   phone: '+919688970870',
   phoneDisplay: '+91 96889 70870',
-  whatsapp: '919876543210',
+  whatsapp: '919688970870',
   email: 'info@vknskn.com',
   location: 'Salem, Tamil Nadu, India',
   companyAddress: 'Vetrivel Sago Products, Salem, Tamil Nadu 636001, India',
