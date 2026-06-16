@@ -23,7 +23,7 @@ export default function Footer() {
           <h3 className={sectionHeading}>{t('footer.quickLinks')}</h3>
           <nav className="flex flex-col gap-2">
             <Link to="/products" className={columnLink}>{t('nav.products')}</Link>
-            <Link to="/outlets" className={columnLink}>{t('nav.facilities')}</Link>
+            <Link to="/facilities" className={columnLink}>{t('nav.facilities')}</Link>
             <Link to="/bulk-orders" className={columnLink}>{t('nav.bulkOrders')}</Link>
             <Link to="/contact" className={columnLink}>{t('nav.contact')}</Link>
           </nav>

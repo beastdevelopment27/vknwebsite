@@ -1,4 +1,4 @@
-import { createRouter, createRoute } from '@tanstack/react-router'
+import { createRouter, createRoute, redirect } from '@tanstack/react-router'
 import { rootRoute } from './root.tsx'
 import Home from '../modules/home.tsx'
 import About from '../modules/About.tsx'
@@ -38,10 +38,18 @@ const qualityRoute = createRoute({
   component: Quality,
 })
 
-const outletsRoute = createRoute({
+const facilitiesRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/facilities',
+  component: Outlets,
+})
+
+const outletsRedirectRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/outlets',
-  component: Outlets,
+  beforeLoad: () => {
+    throw redirect({ to: '/facilities' })
+  },
 })
 
 const contactRoute = createRoute({
@@ -56,7 +64,8 @@ const routeTree = rootRoute.addChildren([
   productsRoute,
   bulkOrdersRoute,
   qualityRoute,
-  outletsRoute,
+  facilitiesRoute,
+  outletsRedirectRoute,
   contactRoute,
 ])
 

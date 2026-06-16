@@ -11,7 +11,7 @@ const navLinks = [
   { to: '/products', labelKey: 'nav.products' },
   { to: '/bulk-orders', labelKey: 'nav.bulkOrders' },
   { to: '/quality', labelKey: 'nav.quality' },
-  { to: '/outlets', labelKey: 'nav.facilities' },
+  { to: '/facilities', labelKey: 'nav.facilities' },
   { to: '/about', labelKey: 'nav.about' },
   { to: '/contact', labelKey: 'nav.contact' },
 ] as const

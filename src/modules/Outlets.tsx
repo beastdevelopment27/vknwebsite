@@ -21,7 +21,7 @@ export default function Outlets() {
 
   return (
     <div className="w-full px-4 py-10 md:px-8 md:py-14">
-      <PageMeta page="facilities" path="/outlets" />
+      <PageMeta page="facilities" path="/facilities" />
 
       <SectionHeader
         badge={t('facilities.badge')}
