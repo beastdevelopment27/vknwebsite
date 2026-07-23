@@ -21,7 +21,7 @@ export default function Outlets() {
   )
 
   return (
-    <div className="w-full px-4 py-10 md:px-8 md:py-14">
+    <div className="w-full px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10">
       <PageMeta page="facilities" path="/facilities" />
 
       <SectionHeader
@@ -30,24 +30,27 @@ export default function Outlets() {
         description={t('facilities.desc')}
       />
 
-      <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
+      <div className="mt-5 grid grid-cols-2 gap-2.5 sm:mt-6 sm:gap-3 md:grid-cols-4">
         {heroStats.map((stat) => (
-          <div key={stat.labelKey} className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
-            <p className="text-xl font-bold text-amber-400 md:text-2xl">{stat.value}</p>
-            <p className="mt-1 text-[10px] uppercase tracking-wider text-white/55 md:text-xs">
+          <div
+            key={stat.labelKey}
+            className="rounded-lg border border-white/10 bg-white/5 p-3 text-center sm:rounded-xl sm:p-3.5"
+          >
+            <p className="text-lg font-bold text-amber-400 sm:text-xl md:text-2xl">{stat.value}</p>
+            <p className="mt-0.5 text-[10px] uppercase tracking-wider text-white/55 sm:text-xs">
               {t(stat.labelKey)}
             </p>
           </div>
         ))}
       </div>
 
-      <div className="mt-10 space-y-8">
+      <div className="mt-6 space-y-5 sm:mt-8">
         {facilities.map((facility) => (
           <article
             key={facility.name}
-            className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 lg:grid lg:grid-cols-2"
+            className="overflow-hidden rounded-xl border border-white/10 bg-white/5 sm:rounded-2xl lg:grid lg:grid-cols-2"
           >
-            <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[320px]">
+            <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[280px]">
               <img
                 src={facility.image}
                 alt={facility.name}
@@ -56,32 +59,36 @@ export default function Outlets() {
                 loading="lazy"
                 className="h-full w-full object-cover"
               />
-              <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/60 px-3 py-1 text-xs text-white">
-                {facility.unit} — {facility.name}
+              <span className="absolute left-3 top-3 rounded-full border border-white/20 bg-black/60 px-2.5 py-0.5 text-[10px] text-white sm:left-4 sm:top-4 sm:px-3 sm:py-1 sm:text-xs">
+                {facility.name}
               </span>
             </div>
-            <div className="p-6 lg:flex lg:flex-col lg:justify-center">
-              <p className="text-xs font-semibold uppercase tracking-wider text-amber-400">
+            <div className="p-4 sm:p-5 lg:flex lg:flex-col lg:justify-center">
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-amber-400 sm:text-xs">
                 {t('facilities.purpose')}
               </p>
-              <h2 className="mt-1 text-xl font-bold text-white">{t(facility.titleKey)}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">{t(facility.descKey)}</p>
+              <h2 className="mt-1 text-base font-bold text-white sm:text-lg">
+                {t(facility.titleKey)}
+              </h2>
+              <p className="mt-1.5 text-xs leading-relaxed text-white/70 sm:text-sm">
+                {t(facility.descKey)}
+              </p>
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                <span className="rounded-full bg-black/40 px-3 py-1 text-xs text-white/80">
+              <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-3.5 sm:gap-2">
+                <span className="rounded-full bg-black/40 px-2.5 py-0.5 text-[10px] text-white/80 sm:px-3 sm:py-1 sm:text-xs">
                   {t('facilities.capacity')}: {facility.capacity}
                 </span>
-                <span className="rounded-full bg-black/40 px-3 py-1 text-xs text-white/80">
+                <span className="rounded-full bg-black/40 px-2.5 py-0.5 text-[10px] text-white/80 sm:px-3 sm:py-1 sm:text-xs">
                   {facility.area}
                 </span>
               </div>
 
-              <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-white/50">
+              <p className="mt-3 text-[10px] font-semibold uppercase tracking-wider text-white/50 sm:mt-3.5 sm:text-xs">
                 {t('facilities.infrastructure')}
               </p>
-              <ul className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3">
+              <ul className="mt-1.5 grid grid-cols-2 gap-1.5 sm:mt-2 sm:grid-cols-3 sm:gap-2">
                 {facility.infrastructureKeys.map((key) => (
-                  <li key={key} className="text-xs text-white/60">
+                  <li key={key} className="text-[10px] text-white/60 sm:text-xs">
                     &#8226; {t(key)}
                   </li>
                 ))}
@@ -91,18 +98,18 @@ export default function Outlets() {
         ))}
       </div>
 
-      <div className="mt-14">
-        <h2 className="text-center text-xl font-bold text-white md:text-2xl">
+      <div className="mt-8 sm:mt-10">
+        <h2 className="text-center text-base font-bold text-white sm:text-lg md:text-xl">
           {t('facilities.gallery')}
         </h2>
-        <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-4 grid grid-cols-2 gap-2.5 sm:mt-5 sm:gap-3 md:grid-cols-3 lg:grid-cols-4">
           {galleryImages.map((item, index) => (
             <Button
               key={item.alt}
               type="button"
               variant="ghost"
               onClick={() => setLightboxIndex(index)}
-              className="group h-auto overflow-hidden rounded-xl border border-white/10 p-0 text-left hover:border-amber-400/40 hover:bg-transparent"
+              className="group h-auto overflow-hidden rounded-lg border border-white/10 p-0 text-left hover:border-amber-400/40 hover:bg-transparent sm:rounded-xl"
             >
               <span className="block w-full">
                 <img
@@ -113,7 +120,7 @@ export default function Outlets() {
                   loading="lazy"
                   className="aspect-[4/3] w-full object-cover transition-transform group-hover:scale-105"
                 />
-                <span className="block bg-white/5 px-3 py-2 text-xs font-normal text-white/70">
+                <span className="block bg-white/5 px-2 py-1.5 text-[10px] font-normal text-white/70 sm:px-3 sm:py-2 sm:text-xs">
                   {item.alt}
                 </span>
               </span>

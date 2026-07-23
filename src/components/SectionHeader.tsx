@@ -13,14 +13,16 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={centered ? 'text-center' : ''}>
-      <span className="inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-amber-400">
+      <span className="inline-block rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-amber-400 sm:px-4 sm:text-xs">
         {badge}
       </span>
-      <h2 className="mt-4 text-2xl font-bold text-white md:text-3xl">{title}</h2>
+      <h2 className="mt-2.5 text-xl font-bold text-white sm:mt-3 sm:text-2xl md:text-3xl">
+        {title}
+      </h2>
       {description && (
         <p
-          className={`mt-3 text-sm leading-relaxed text-white/70 md:text-base ${
-            centered ? 'mx-auto max-w-2xl' : 'max-w-2xl'
+          className={`mt-2 text-xs leading-relaxed text-white/65 sm:mt-2.5 sm:text-sm md:text-base ${
+            centered ? 'mx-auto max-w-xl' : 'max-w-xl'
           }`}
         >
           {description}

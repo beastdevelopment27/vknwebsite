@@ -15,7 +15,7 @@ export default function Products() {
   const { t } = useTranslation()
 
   return (
-    <div className="w-full px-4 py-10 md:px-8 md:py-14">
+    <div className="w-full px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10">
       <PageMeta page="products" path="/products" />
 
       <SectionHeader
@@ -24,13 +24,13 @@ export default function Products() {
         description={t('products.desc')}
       />
 
-      <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-5 py-2 text-sm font-semibold text-amber-400">
+      <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1.5 text-xs font-semibold text-amber-400 sm:mt-5 sm:px-4 sm:text-sm">
         <span aria-hidden="true">&#10003;</span>
         {t('products.packaging45')}
       </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
-        <div className="overflow-hidden rounded-2xl border border-white/10">
+      <div className="mt-6 grid grid-cols-1 gap-5 lg:mt-8 lg:grid-cols-2 lg:items-start lg:gap-6">
+        <div className="overflow-hidden rounded-xl border border-white/10 sm:rounded-2xl">
           <img
             src="/products/sabudana-premium.svg"
             alt="Premium pearl sabudana"
@@ -42,37 +42,42 @@ export default function Products() {
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-white">{t('products.highlights')}</h2>
-          <ul className="mt-4 space-y-3">
+          <h2 className="text-base font-bold text-white sm:text-lg">{t('products.highlights')}</h2>
+          <ul className="mt-3 space-y-2 sm:mt-3.5">
             {productFeatureKeys.map((key) => (
-              <li key={key} className="flex items-start gap-3 text-sm text-white/75">
+              <li key={key} className="flex items-start gap-2 text-xs text-white/75 sm:gap-2.5 sm:text-sm">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
                 {t(key)}
               </li>
             ))}
           </ul>
 
-          <h3 className="mt-8 text-lg font-semibold text-emerald-200">{t('products.grades')}</h3>
-          <div className="mt-4 space-y-3">
+          <h3 className="mt-5 text-sm font-semibold text-emerald-200 sm:mt-6 sm:text-base">
+            {t('products.grades')}
+          </h3>
+          <div className="mt-3 space-y-2 sm:space-y-2.5">
             {sabudanaGrades.map((item) => (
-              <div key={item.gradeKey} className="rounded-xl border border-white/10 bg-white/5 p-4">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="font-semibold text-white">{t(item.gradeKey)}</span>
-                  <span className="text-xs text-amber-400">{t(item.sizeKey)}</span>
+              <div
+                key={item.gradeKey}
+                className="rounded-lg border border-white/10 bg-white/5 p-3 sm:rounded-xl sm:p-3.5"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-1.5">
+                  <span className="text-sm font-semibold text-white">{t(item.gradeKey)}</span>
+                  <span className="text-[10px] text-amber-400 sm:text-xs">{t(item.sizeKey)}</span>
                 </div>
-                <p className="mt-1 text-sm text-white/60">{t(item.useKey)}</p>
+                <p className="mt-0.5 text-xs text-white/60">{t(item.useKey)}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-2">
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 className="text-lg font-semibold text-white">{t('products.packaging')}</h3>
-          <ul className="mt-4 space-y-2">
+      <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-2">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-4 sm:rounded-2xl sm:p-5">
+          <h3 className="text-sm font-semibold text-white sm:text-base">{t('products.packaging')}</h3>
+          <ul className="mt-3 space-y-1.5">
             {packagingOptions.map((key) => (
-              <li key={key} className="flex items-center gap-2 text-sm text-white/70">
+              <li key={key} className="flex items-center gap-2 text-xs text-white/70 sm:text-sm">
                 <span className="text-amber-400">&#10003;</span>
                 {t(key)}
               </li>
@@ -80,14 +85,14 @@ export default function Products() {
           </ul>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 className="text-lg font-semibold text-white">{t('products.shipping')}</h3>
-          <ul className="mt-4 space-y-3 text-sm text-white/70">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-4 sm:rounded-2xl sm:p-5">
+          <h3 className="text-sm font-semibold text-white sm:text-base">{t('products.shipping')}</h3>
+          <ul className="mt-3 space-y-1.5 text-xs text-white/70 sm:text-sm">
             {productShippingKeys.map((key) => (
               <li key={key}>{t(key)}</li>
             ))}
           </ul>
-          <div className="mt-6 overflow-hidden rounded-xl border border-white/10">
+          <div className="mt-4 overflow-hidden rounded-lg border border-white/10 sm:mt-5 sm:rounded-xl">
             <img
               src="/facilities/dispatch.svg"
               alt="Loading and dispatch"
@@ -100,7 +105,7 @@ export default function Products() {
           <Button
             asChild
             size="lg"
-            className="mt-6 h-11 rounded-full bg-amber-400 px-6 text-emerald-950 hover:bg-amber-400/90"
+            className="mt-4 h-10 rounded-full bg-amber-400 px-5 text-emerald-950 hover:bg-amber-400/90 sm:mt-5 sm:h-11 sm:px-6"
           >
             <Link to="/bulk-orders">{t('cta.requestBulkQuote')}</Link>
           </Button>

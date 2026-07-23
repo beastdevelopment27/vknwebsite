@@ -12,11 +12,11 @@ export default function Footer() {
   const { t } = useTranslation()
 
   return (
-    <footer className="w-full bg-emerald-950 px-4 py-8 md:px-8">
-      <div className="flex w-full flex-row flex-wrap gap-8 lg:grid lg:grid-cols-12 lg:gap-8">
+    <footer className="w-full bg-emerald-950 px-4 py-6 sm:px-6 sm:py-7 md:px-8 md:py-8">
+      <div className="flex w-full flex-row flex-wrap gap-6 sm:gap-8 lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="min-w-[200px] flex-1 basis-full lg:col-span-4 lg:basis-auto">
-          <h2 className="text-xl font-semibold leading-snug text-amber-400">{company.name}</h2>
-          <p className="mt-3 text-sm leading-relaxed text-white/70">{t('footer.desc')}</p>
+          <h2 className="text-lg font-semibold leading-snug text-amber-400 sm:text-xl">{company.name}</h2>
+          <p className="mt-2 text-xs leading-relaxed text-white/70 sm:mt-2.5 sm:text-sm">{t('footer.desc')}</p>
         </div>
 
         <div className="min-w-[120px] flex-1 basis-[calc(50%-1rem)] lg:col-span-2 lg:basis-auto">
