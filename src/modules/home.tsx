@@ -217,7 +217,10 @@ export default function Home() {
               <h3 className="mt-2 font-semibold text-white">{t(`process.${key}.title`)}</h3>
               <p className="mt-2 text-xs leading-relaxed text-white/60">{t(`process.${key}.desc`)}</p>
               {index < processStepKeys.length - 1 && (
-                <span className="absolute -right-2 top-1/2 hidden -translate-y-1/2 text-amber-400/40 xl:block" aria-hidden="true">
+                <span
+                  className="pointer-events-none absolute left-full top-1/2 z-10 ml-2 hidden size-4 -translate-x-1/2 -translate-y-1/2 items-center justify-center text-sm leading-none text-amber-400/60 xl:flex"
+                  aria-hidden="true"
+                >
                   &rarr;
                 </span>
               )}
