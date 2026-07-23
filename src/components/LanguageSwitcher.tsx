@@ -27,7 +27,7 @@ export function LanguageSwitcher() {
       <SelectTrigger
         size="sm"
         aria-label="Language"
-        className="w-[6.5rem] border-white/15 bg-white/5"
+        className="w-[5.25rem] border-white/15 bg-white/5 sm:w-[6.5rem]"
       >
         <SelectValue>{active}</SelectValue>
       </SelectTrigger>

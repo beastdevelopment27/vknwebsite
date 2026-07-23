@@ -27,26 +27,34 @@ export default function Header() {
     }
   }, [open])
 
+  useEffect(() => {
+    const onResize = () => {
+      if (window.matchMedia('(min-width: 1024px)').matches) setOpen(false)
+    }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-white/5 bg-background/95 backdrop-blur-sm">
-      <div className="flex w-full items-center gap-3 px-4 py-3 md:px-8 md:py-3.5">
-        <Link to="/" className="relative z-10 shrink-0" onClick={() => setOpen(false)}>
+    <header className="fixed top-0 left-0 z-50 w-full border-b border-white/5 bg-background/95 pt-[env(safe-area-inset-top)] backdrop-blur-sm">
+      <div className="mx-auto flex w-full max-w-7xl items-center gap-2 px-3 py-2.5 sm:gap-3 sm:px-4 sm:py-3 lg:px-8 lg:py-3.5">
+        <Link to="/" className="relative z-10 min-w-0 shrink" onClick={() => setOpen(false)}>
           <img
             src={logo}
             alt="Kandhavel Sago Factory"
             width={200}
             height={44}
-            className="h-11 w-auto max-w-[180px] object-contain sm:max-w-[200px] md:h-10 md:max-w-[160px]"
+            className="h-9 w-auto max-w-[140px] object-contain object-left sm:h-10 sm:max-w-[170px] lg:h-10 lg:max-w-[180px]"
           />
         </Link>
 
-        <div className="ml-auto hidden items-center gap-5 md:flex">
-          <nav className="flex items-center gap-5 text-sm text-white/80">
+        <div className="ml-auto hidden items-center gap-3 lg:flex xl:gap-5">
+          <nav className="flex items-center gap-3 text-sm text-white/80 xl:gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className="transition-colors hover:text-amber-400"
+                className="whitespace-nowrap transition-colors hover:text-amber-400"
               >
                 {t(link.labelKey)}
               </Link>
@@ -54,14 +62,15 @@ export default function Header() {
           </nav>
           <Link
             to="/bulk-orders"
-            className="shrink-0 rounded-full bg-amber-400 px-4 py-2 text-xs font-semibold text-emerald-950"
+            className="shrink-0 rounded-full bg-amber-400 px-3.5 py-2 text-xs font-semibold text-emerald-950 xl:px-4"
           >
             {t('cta.getQuote')}
           </Link>
           <LanguageSwitcher />
         </div>
 
-        <div className="ml-auto flex items-center gap-2 md:hidden">
+        <div className="ml-auto flex items-center gap-2 lg:hidden">
+          <LanguageSwitcher />
           <button
             type="button"
             aria-label={open ? 'Close menu' : 'Open menu'}
@@ -71,22 +80,21 @@ export default function Header() {
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
-          <LanguageSwitcher />
         </div>
       </div>
 
       <div
-        className={`overflow-hidden border-t border-white/5 bg-background/98 transition-all duration-300 md:hidden ${
-          open ? 'max-h-[520px] opacity-100' : 'max-h-0 opacity-0'
+        className={`overflow-hidden border-t border-white/5 bg-background/98 transition-all duration-300 lg:hidden ${
+          open ? 'max-h-[min(80dvh,560px)] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav className="flex flex-col gap-1 px-4 py-4">
+        <nav className="flex max-h-[min(70dvh,480px)] flex-col gap-0.5 overflow-y-auto overscroll-contain px-3 py-3 sm:px-4">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               onClick={() => setOpen(false)}
-              className="rounded-lg px-3 py-3 text-sm text-white/85 transition-colors hover:bg-white/5 hover:text-amber-400"
+              className="rounded-lg px-3 py-2.5 text-sm text-white/85 transition-colors hover:bg-white/5 hover:text-amber-400"
             >
               {t(link.labelKey)}
             </Link>
@@ -94,7 +102,7 @@ export default function Header() {
           <Link
             to="/bulk-orders"
             onClick={() => setOpen(false)}
-            className="mt-2 rounded-full bg-amber-400 px-4 py-3 text-center text-sm font-semibold text-emerald-950"
+            className="mt-2 rounded-full bg-amber-400 px-4 py-2.5 text-center text-sm font-semibold text-emerald-950"
           >
             {t('cta.getQuote')}
           </Link>

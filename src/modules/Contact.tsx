@@ -31,10 +31,13 @@ export default function Contact() {
         <Button
           asChild
           size="lg"
-          className="h-10 rounded-full bg-amber-400 px-4 text-emerald-950 hover:bg-amber-400/90 sm:h-11 sm:px-5"
+          className="h-10 max-w-full rounded-full bg-amber-400 px-4 text-emerald-950 hover:bg-amber-400/90 sm:h-11 sm:px-5"
         >
-          <a href={`tel:${company.phone}`}>
-            {t('cta.callNow')}: {company.phoneDisplay}
+          <a href={`tel:${company.phone}`} className="truncate">
+            <span className="sm:hidden">{t('cta.callNow')}</span>
+            <span className="hidden sm:inline">
+              {t('cta.callNow')}: {company.phoneDisplay}
+            </span>
           </a>
         </Button>
         <Button
