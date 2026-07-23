@@ -2,6 +2,7 @@ import { Link } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 
 import { PageMeta } from '@/components/PageMeta'
+import { Button } from '@/components/ui/button'
 import SectionHeader from '../components/SectionHeader.tsx'
 import { heroStats, testimonialKeys, timelineKeys } from '../data/company.ts'
 
@@ -82,12 +83,21 @@ export default function About() {
       </div>
 
       <div className="mt-10 flex flex-wrap justify-center gap-4">
-        <Link to="/bulk-orders" className="rounded-full bg-amber-400 px-7 py-3 text-sm font-semibold text-emerald-950">
-          {t('cta.requestQuote')}
-        </Link>
-        <Link to="/contact" className="rounded-full border border-white/30 px-7 py-3 text-sm text-white">
-          {t('cta.contactSales')}
-        </Link>
+        <Button
+          asChild
+          size="lg"
+          className="h-11 rounded-full bg-amber-400 px-7 text-emerald-950 hover:bg-amber-400/90"
+        >
+          <Link to="/bulk-orders">{t('cta.requestQuote')}</Link>
+        </Button>
+        <Button
+          asChild
+          variant="outline"
+          size="lg"
+          className="h-11 rounded-full border-white/30 px-7 text-white hover:bg-white/5 hover:text-white"
+        >
+          <Link to="/contact">{t('cta.contactSales')}</Link>
+        </Button>
       </div>
     </div>
   )

@@ -2,6 +2,7 @@ import { Link } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 
 import { PageMeta } from '@/components/PageMeta'
+import { Button } from '@/components/ui/button'
 import QuoteForm from '../components/QuoteForm.tsx'
 import { company } from '../data/company.ts'
 
@@ -23,32 +24,45 @@ export default function Contact() {
       </div>
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <a
-          href={`tel:${company.phone}`}
-          className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-emerald-950"
+        <Button
+          asChild
+          size="lg"
+          className="h-11 rounded-full bg-amber-400 px-6 text-emerald-950 hover:bg-amber-400/90"
         >
-          {t('cta.callNow')}: {company.phoneDisplay}
-        </a>
-        <a
-          href={`https://wa.me/${company.whatsapp}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full border border-green-500/50 bg-green-500/10 px-6 py-3 text-sm font-medium text-green-400"
+          <a href={`tel:${company.phone}`}>
+            {t('cta.callNow')}: {company.phoneDisplay}
+          </a>
+        </Button>
+        <Button
+          asChild
+          variant="outline"
+          size="lg"
+          className="h-11 rounded-full border-green-500/50 bg-green-500/10 px-6 text-green-400 hover:bg-green-500/20 hover:text-green-400"
         >
-          {t('cta.whatsappSales')}
-        </a>
-        <a
-          href={`mailto:${company.email}`}
-          className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-medium text-white"
+          <a
+            href={`https://wa.me/${company.whatsapp}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t('cta.whatsappSales')}
+          </a>
+        </Button>
+        <Button
+          asChild
+          variant="outline"
+          size="lg"
+          className="h-11 rounded-full border-white/30 px-6 text-white hover:bg-white/5 hover:text-white"
         >
-          {company.email}
-        </a>
-        <Link
-          to="/bulk-orders"
-          className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 px-6 py-3 text-sm font-medium text-amber-400"
+          <a href={`mailto:${company.email}`}>{company.email}</a>
+        </Button>
+        <Button
+          asChild
+          variant="outline"
+          size="lg"
+          className="h-11 rounded-full border-amber-400/40 px-6 text-amber-400 hover:bg-amber-400/10 hover:text-amber-400"
         >
-          {t('cta.requestQuote')}
-        </Link>
+          <Link to="/bulk-orders">{t('cta.requestQuote')}</Link>
+        </Button>
       </div>
 
       <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">

@@ -33,7 +33,7 @@ export default function Header() {
         <Link to="/" className="relative z-10 shrink-0" onClick={() => setOpen(false)}>
           <img
             src={logo}
-            alt="Vetrivel Sago Products"
+            alt="Kandhavel Sago Factory"
             width={200}
             height={44}
             className="h-11 w-auto max-w-[180px] object-contain sm:max-w-[200px] md:h-10 md:max-w-[160px]"

@@ -1,7 +1,7 @@
 import { company } from '@/data/company'
 
 export const SITE_URL = 'https://vknskn.com'
-export const SITE_NAME = 'Vetrivel Sago Products'
+export const SITE_NAME = 'Kandhavel Sago Factory'
 export const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const PUBLIC_ROUTES = [
@@ -81,7 +81,7 @@ export function getLocalBusinessSchema() {
     '@id': `${SITE_URL}/#business`,
     name: company.name,
     description:
-      'Premium pearl sabudana manufacturer in Salem, Tamil Nadu. 40+ years experience, 2 production units, 9 tons daily bulk supply.',
+      'Premium pearl sabudana manufacturer in Salem, Tamil Nadu. 40+ years experience, 9 tons daily bulk supply.',
     url: SITE_URL,
     image: `${SITE_URL}/og-image.png`,
     telephone: company.phone,

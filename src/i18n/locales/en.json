@@ -70,7 +70,7 @@
   },
   "stats": {
     "years": "Years Experience",
-    "units": "Manufacturing Units",
+    "units": "Manufacturing Unit",
     "bags": "Bags Daily",
     "capacity": "Production Capacity"
   },
@@ -112,7 +112,7 @@
     "desc": "Dedicated bulk order page for wholesalers, distributors, food manufacturers, and export buyers.",
     "capacity": "Production Capacity",
     "capacityValue": "9 Tons Daily",
-    "capacityDesc": "Combined daily output of 9 tons across two units, with over 200 bags produced daily. Built for recurring bulk orders and long-term supply partnerships.",
+    "capacityDesc": "Daily output of 9 tons from our Salem manufacturing unit, with over 200 bags produced daily. Built for recurring bulk orders and long-term supply partnerships.",
     "packaging": "Packaging",
     "packagingValue": "45kg Bags",
     "buyers": "Buyer Categories",
@@ -157,28 +157,22 @@
     "lab": { "title": "Lab Testing", "desc": "Periodic lab analysis for compliance and buyer specifications." }
   },
   "facilities": {
-    "badge": "Our Facilities",
-    "title": "Two Production Units. One Reliable Supply Chain.",
+    "badge": "Our Facility",
+    "title": "One Integrated Manufacturing Facility",
     "desc": "Integrated processing, grading, warehousing, and dispatch infrastructure built for bulk sabudana supply.",
     "gallery": "Infrastructure Gallery",
     "purpose": "Purpose",
     "capacity": "Production Capacity",
     "infrastructure": "Infrastructure",
     "unit1": {
-      "title": "Primary Processing Unit",
-      "desc": "Core extraction, drying, and bulk production facility with dedicated machinery lines and storage.",
+      "title": "Full-Cycle Production Facility",
+      "desc": "End-to-end extraction, drying, grading, packaging, warehousing, and dispatch under one roof in Salem.",
       "infra1": "Extraction lines",
       "infra2": "Drying chambers",
       "infra3": "Raw material storage",
-      "infra4": "QC lab"
-    },
-    "unit2": {
-      "title": "Grading & Dispatch Unit",
-      "desc": "Pearl grading, packaging, warehouse storage, and dispatch operations for bulk and retail supply.",
-      "infra1": "Grading & sieving",
-      "infra2": "Packaging line",
-      "infra3": "Warehouse",
-      "infra4": "Loading bay"
+      "infra4": "QC lab",
+      "infra5": "Packaging line",
+      "infra6": "Loading bay"
     }
   },
   "gallery": {
@@ -201,13 +195,13 @@
   "about": {
     "badge": "About Us",
     "title": "Four Decades of Sabudana Manufacturing Excellence",
-    "desc": "Vetrivel Sago Products and Kandhavel Sago Factory — two units, one commitment to quality bulk supply from Salem, Tamil Nadu.",
+    "desc": "Kandhavel Sago Factory — committed to quality bulk supply from Salem, Tamil Nadu.",
     "story": "Our Story",
-    "storyP1": "What began as a family-led sago operation has grown into a professionally managed manufacturing group serving wholesalers and distributors across Tamil Nadu. Today we operate two dedicated production units with a combined daily capacity of 9 tons.",
+    "storyP1": "What began as a family-led sago operation has grown into a professionally managed manufacturing unit serving wholesalers and distributors across Tamil Nadu. Today we operate a dedicated production facility with a daily capacity of 9 tons.",
     "storyP2": "Our focus is simple: consistent pearl sago quality, reliable bulk dispatch, and long-term partnerships with buyers who depend on us every day.",
     "atGlance": "At a Glance",
     "glance1": "40+ years of sabudana manufacturing",
-    "glance2": "2 production units in Tamil Nadu",
+    "glance2": "1 production unit in Tamil Nadu",
     "glance3": "200+ bags produced daily",
     "glance4": "Factory-direct bulk supply"
   },
@@ -219,9 +213,9 @@
     "rights": "All rights reserved."
   },
   "timeline": {
-    "1980s": { "year": "1980s", "title": "Foundation", "desc": "Kadhavel Sago Factory established in Salem region." },
-    "2000s": { "year": "2000s", "title": "Expansion", "desc": "Vetrivel Sago Products launched for scaled production." },
-    "today": { "year": "Today", "title": "2 Units", "desc": "9 tons daily capacity across two manufacturing units." },
+    "1980s": { "year": "1980s", "title": "Foundation", "desc": "Kandhavel Sago Factory established in Salem region." },
+    "2000s": { "year": "2000s", "title": "Expansion", "desc": "Scaled production capacity for grading, packaging, and bulk dispatch." },
+    "today": { "year": "Today", "title": "Full Capacity", "desc": "9 tons daily capacity from our Salem manufacturing unit." },
     "future": { "year": "Future", "title": "Growth", "desc": "Expanding export and nationwide distributor network." }
   },
   "testimonials": {
@@ -230,12 +224,12 @@
     "3": { "quote": "Trusted partner for pearl sago supply across South India.", "author": "Regional Distributor" }
   },
   "seo": {
-    "home": { "title": "Salem Sabudana Manufacturer | Bulk Sago Supplier | Vetrivel Sago", "desc": "Premium Salem sabudana manufacturer. 40+ years, 2 units, 9 tons daily. Bulk supply for wholesalers, distributors & exporters." },
+    "home": { "title": "Salem Sabudana Manufacturer | Bulk Sago Supplier | Kandhavel Sago", "desc": "Premium Salem sabudana manufacturer. 40+ years, 9 tons daily. Bulk supply for wholesalers, distributors & exporters." },
     "products": { "title": "Pearl Sabudana Products | 45kg Packaging | Salem Sago", "desc": "Premium pearl sabudana in 45kg bags. Factory-direct bulk supply from Salem, Tamil Nadu." },
     "bulk": { "title": "Bulk Sabudana Orders | Wholesale Sago Supplier", "desc": "Request bulk sabudana quote. 9 tons daily capacity, 45kg packaging. Wholesalers & exporters welcome." },
     "quality": { "title": "Quality Assurance | Sabudana Manufacturing Standards", "desc": "Moisture testing, size grading, batch verification. Trusted sabudana quality from Salem manufacturer." },
-    "facilities": { "title": "Manufacturing Facilities | Salem Sago Factory", "desc": "Two production units with processing, drying, warehouse, and dispatch infrastructure." },
-    "contact": { "title": "Contact Sales | Salem Sabudana Manufacturer", "desc": "Contact Vetrivel Sago for bulk orders. Phone, WhatsApp, email. Salem, Tamil Nadu." },
+    "facilities": { "title": "Manufacturing Facility | Salem Sago Factory", "desc": "Integrated production unit with processing, drying, warehouse, and dispatch infrastructure." },
+    "contact": { "title": "Contact Sales | Salem Sabudana Manufacturer", "desc": "Contact Kandhavel Sago for bulk orders. Phone, WhatsApp, email. Salem, Tamil Nadu." },
     "about": { "title": "About Us | 40+ Years Sabudana Manufacturing", "desc": "Four decades of sabudana manufacturing excellence in Salem, Tamil Nadu." }
   }
 }

@@ -3,6 +3,6 @@
   <rect x="100" y="100" width="600" height="400" rx="24" fill="#243b36" stroke="#34a85a" stroke-width="2" stroke-opacity="0.35"/>
   <rect x="180" y="200" width="440" height="80" rx="40" fill="#34a85a" fill-opacity="0.2" stroke="#fbbf24" stroke-width="2"/>
   <rect x="220" y="320" width="360" height="60" rx="30" fill="#34a85a" fill-opacity="0.15"/>
-  <text x="400" y="430" text-anchor="middle" fill="#e5e5e5" font-family="Arial, sans-serif" font-size="28" font-weight="600">Vetrivel Products</text>
+  <text x="400" y="430" text-anchor="middle" fill="#e5e5e5" font-family="Arial, sans-serif" font-size="28" font-weight="600">Kandhavel Products</text>
   <text x="400" y="465" text-anchor="middle" fill="#a3a3a3" font-family="Arial, sans-serif" font-size="16">Replace with /carousel/products.jpg</text>
 </svg>

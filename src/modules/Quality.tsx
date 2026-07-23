@@ -85,14 +85,16 @@ export default function Quality() {
 
       <div className="mt-14 rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
         <h2 className="text-lg font-bold text-white">{t('quality.stages')}</h2>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-sm text-white/70">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-3 text-sm text-white/70">
           {processStepKeys.map((key, index) => (
             <span key={key} className="flex items-center gap-2">
-              <span className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5">
+              <span className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 whitespace-nowrap">
                 {t(`process.${key}.title`)}
               </span>
               {index < processStepKeys.length - 1 && (
-                <span className="text-amber-400/50" aria-hidden="true">&darr;</span>
+                <span className="text-amber-400/60" aria-hidden="true">
+                  &rarr;
+                </span>
               )}
             </span>
           ))}

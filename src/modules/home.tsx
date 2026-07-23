@@ -5,12 +5,13 @@ import { useTranslation } from 'react-i18next'
 
 import { PageMeta } from '@/components/PageMeta'
 import SectionHeader from '../components/SectionHeader.tsx'
+import { Button } from '@/components/ui/button'
 import {
   Carousel,
   type CarouselApi,
   CarouselContent,
   CarouselItem,
-} from '@/components/ui/carousel.tsx'
+} from '@/components/ui/carousel'
 import {
   company,
   heroStats,
@@ -22,19 +23,19 @@ import {
 
 const heroSlides = [
   {
-    title: 'Kadhavel Sago Factory',
+    title: 'Kandhavel Sago Factory',
     subtitle: 'Primary processing & bulk production',
     image: '/facilities/processing.svg',
-  },
-  {
-    title: 'Vetrivel Sago Products',
-    subtitle: 'Grading, packaging & dispatch',
-    image: '/facilities/dispatch.svg',
   },
   {
     title: 'Premium Pearl Sabudana',
     subtitle: 'Consistent quality for bulk buyers',
     image: '/products/sabudana-premium.svg',
+  },
+  {
+    title: 'Reliable Bulk Dispatch',
+    subtitle: 'Grading, packaging & on-time delivery',
+    image: '/facilities/dispatch.svg',
   },
 ]
 
@@ -86,12 +87,14 @@ function HeroCarousel() {
       </Carousel>
       <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
         {heroSlides.map((slide, index) => (
-          <button
+          <Button
             key={slide.title}
             type="button"
+            variant="ghost"
+            size="icon-xs"
             aria-label={`Go to slide ${index + 1}`}
             onClick={() => api?.scrollTo(index)}
-            className={`h-2 rounded-full transition-all ${
+            className={`h-2 min-w-0 rounded-full p-0 hover:bg-transparent ${
               index === current ? 'w-6 bg-amber-400' : 'w-2 bg-white/35'
             }`}
           />
@@ -137,18 +140,21 @@ export default function Home() {
             </ul>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                to="/bulk-orders"
-                className="rounded-full bg-amber-400 px-7 py-3 text-sm font-semibold text-emerald-950 transition-opacity hover:opacity-90"
+              <Button
+                asChild
+                size="lg"
+                className="h-11 rounded-full bg-amber-400 px-7 text-emerald-950 hover:bg-amber-400/90"
               >
-                {t('cta.requestQuote')}
-              </Link>
-              <Link
-                to="/contact"
-                className="rounded-full border border-white/30 px-7 py-3 text-sm font-medium text-white transition-colors hover:border-amber-400/50 hover:text-amber-400"
+                <Link to="/bulk-orders">{t('cta.requestQuote')}</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="h-11 rounded-full border-white/30 px-7 text-white hover:border-amber-400/50 hover:bg-transparent hover:text-amber-400"
               >
-                {t('cta.contactSales')}
-              </Link>
+                <Link to="/contact">{t('cta.contactSales')}</Link>
+              </Button>
             </div>
           </div>
 
@@ -211,8 +217,8 @@ export default function Home() {
               <h3 className="mt-2 font-semibold text-white">{t(`process.${key}.title`)}</h3>
               <p className="mt-2 text-xs leading-relaxed text-white/60">{t(`process.${key}.desc`)}</p>
               {index < processStepKeys.length - 1 && (
-                <span className="absolute -right-2 top-1/2 hidden text-amber-400/40 xl:block" aria-hidden="true">
-                  &darr;
+                <span className="absolute -right-2 top-1/2 hidden -translate-y-1/2 text-amber-400/40 xl:block" aria-hidden="true">
+                  &rarr;
                 </span>
               )}
             </div>
@@ -262,20 +268,27 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-white md:text-3xl">{t('home.ctaTitle')}</h2>
         <p className="mx-auto mt-3 max-w-xl text-sm text-white/70">{t('home.ctaDesc')}</p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
-          <Link
-            to="/bulk-orders"
-            className="rounded-full bg-amber-400 px-8 py-3 text-sm font-semibold text-emerald-950"
+          <Button
+            asChild
+            size="lg"
+            className="h-11 rounded-full bg-amber-400 px-8 text-emerald-950 hover:bg-amber-400/90"
           >
-            {t('cta.requestQuote')}
-          </Link>
-          <a
-            href={`https://wa.me/${company.whatsapp}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-green-500/50 px-8 py-3 text-sm font-medium text-green-400"
+            <Link to="/bulk-orders">{t('cta.requestQuote')}</Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="h-11 rounded-full border-green-500/50 px-8 text-green-400 hover:bg-green-500/10 hover:text-green-400"
           >
-            {t('cta.whatsappSales')}
-          </a>
+            <a
+              href={`https://wa.me/${company.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t('cta.whatsappSales')}
+            </a>
+          </Button>
         </div>
       </section>
     </>

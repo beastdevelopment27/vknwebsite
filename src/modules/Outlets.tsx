@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { PageMeta } from '@/components/PageMeta'
+import { Button } from '@/components/ui/button'
 import SectionHeader from '../components/SectionHeader.tsx'
 import { facilities, facilityGallery, heroStats } from '../data/company.ts'
 
@@ -78,7 +79,7 @@ export default function Outlets() {
               <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-white/50">
                 {t('facilities.infrastructure')}
               </p>
-              <ul className="mt-2 grid grid-cols-2 gap-2">
+              <ul className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3">
                 {facility.infrastructureKeys.map((key) => (
                   <li key={key} className="text-xs text-white/60">
                     &#8226; {t(key)}
@@ -96,22 +97,27 @@ export default function Outlets() {
         </h2>
         <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
           {galleryImages.map((item, index) => (
-            <button
+            <Button
               key={item.alt}
               type="button"
+              variant="ghost"
               onClick={() => setLightboxIndex(index)}
-              className="group overflow-hidden rounded-xl border border-white/10 text-left transition-colors hover:border-amber-400/40"
+              className="group h-auto overflow-hidden rounded-xl border border-white/10 p-0 text-left hover:border-amber-400/40 hover:bg-transparent"
             >
-              <img
-                src={item.src}
-                alt={item.alt}
-                width={400}
-                height={300}
-                loading="lazy"
-                className="aspect-[4/3] w-full object-cover transition-transform group-hover:scale-105"
-              />
-              <span className="block bg-white/5 px-3 py-2 text-xs text-white/70">{item.alt}</span>
-            </button>
+              <span className="block w-full">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  width={400}
+                  height={300}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover transition-transform group-hover:scale-105"
+                />
+                <span className="block bg-white/5 px-3 py-2 text-xs font-normal text-white/70">
+                  {item.alt}
+                </span>
+              </span>
+            </Button>
           ))}
         </div>
       </div>

@@ -1,21 +1,21 @@
 export const company = {
-  name: 'Vetrivel Sago Products & Kandhavel Sago Factory',
-  shortName: 'VSP & KSF',
+  name: 'Kandhavel Sago Factory',
+  shortName: 'KSF',
   tagline: 'Premium Salem Sabudana Manufacturer',
   phone: '+919688970870',
   phoneDisplay: '+91 96889 70870',
   whatsapp: '919688970870',
   email: 'info@vknskn.com',
   location: 'Salem, Tamil Nadu, India',
-  companyAddress: 'Vetrivel Sago Products, Salem, Tamil Nadu 636001, India',
-  factoryAddress: 'Kadhavel Sago Factory, Salem District, Tamil Nadu, India',
+  companyAddress: 'Kandhavel Sago Factory, Salem, Tamil Nadu 636001, India',
+  factoryAddress: 'Kandhavel Sago Factory, Salem District, Tamil Nadu, India',
   mapEmbed:
     'https://maps.google.com/maps?q=Salem%2C%20Tamil+Nadu%2C%20India&z=11&output=embed',
 }
 
 export const heroStats = [
   { value: '40+', labelKey: 'stats.years' },
-  { value: '2', labelKey: 'stats.units' },
+  { value: '1', labelKey: 'stats.units' },
   { value: '200+', labelKey: 'stats.bags' },
   { value: '9 Tons', labelKey: 'stats.capacity' },
 ] as const
@@ -36,24 +36,21 @@ export const testimonialKeys = ['1', '2', '3'] as const
 
 export const facilities = [
   {
-    unit: 'Unit 1',
-    name: 'Kadhavel Sago Factory',
+    unit: 'Production Unit',
+    name: 'Kandhavel Sago Factory',
     titleKey: 'facilities.unit1.title',
     descKey: 'facilities.unit1.desc',
     image: '/facilities/processing.svg',
-    capacity: '5 Tons / Day',
+    capacity: '9 Tons / Day',
     area: 'Multi-acre campus',
-    infrastructureKeys: ['facilities.unit1.infra1', 'facilities.unit1.infra2', 'facilities.unit1.infra3', 'facilities.unit1.infra4'],
-  },
-  {
-    unit: 'Unit 2',
-    name: 'Vetrivel Sago Products',
-    titleKey: 'facilities.unit2.title',
-    descKey: 'facilities.unit2.desc',
-    image: '/facilities/dispatch.svg',
-    capacity: '4 Tons / Day',
-    area: 'Integrated facility',
-    infrastructureKeys: ['facilities.unit2.infra1', 'facilities.unit2.infra2', 'facilities.unit2.infra3', 'facilities.unit2.infra4'],
+    infrastructureKeys: [
+      'facilities.unit1.infra1',
+      'facilities.unit1.infra2',
+      'facilities.unit1.infra3',
+      'facilities.unit1.infra4',
+      'facilities.unit1.infra5',
+      'facilities.unit1.infra6',
+    ],
   },
 ]
 

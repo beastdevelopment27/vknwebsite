@@ -2,6 +2,7 @@ import { Link } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 
 import { PageMeta } from '@/components/PageMeta'
+import { Button } from '@/components/ui/button'
 import QuoteForm from '../components/QuoteForm.tsx'
 import SectionHeader from '../components/SectionHeader.tsx'
 import { buyerKeys, bulkStepKeys, company, heroStats, packagingOptions } from '../data/company.ts'
@@ -85,24 +86,40 @@ export default function BulkOrders() {
 
           <p className="mt-6 text-sm text-white/50">{t('bulk.moq')}</p>
 
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href={`tel:${company.phone}`}
-              className="rounded-full border border-white/30 px-5 py-2.5 text-sm text-white"
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="h-11 rounded-full border-white/30 px-5 text-white hover:border-white/50 hover:bg-white/5 hover:text-white"
             >
-              {t('cta.callNow')}
-            </a>
-            <a
-              href={`https://wa.me/${company.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-green-500/40 px-5 py-2.5 text-sm text-green-400"
+              <a href={`tel:${company.phone}`}>{t('cta.callNow')}</a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="h-11 rounded-full border-green-500/40 px-5 text-green-400 hover:border-green-500/70 hover:bg-green-500/10 hover:text-green-400"
             >
-              {t('cta.whatsappSales')}
-            </a>
-            <Link to="/products" className="rounded-full text-sm text-amber-400 underline-offset-4 hover:underline">
-              {t('bulk.viewProducts')} &rarr;
-            </Link>
+              <a
+                href={`https://wa.me/${company.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('cta.whatsappSales')}
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="h-11 rounded-full border-amber-400/40 px-5 text-amber-400 hover:border-amber-400/70 hover:bg-amber-400/10 hover:text-amber-400"
+            >
+              <Link to="/products">
+                {t('bulk.viewProducts')}
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </Button>
           </div>
         </div>
 

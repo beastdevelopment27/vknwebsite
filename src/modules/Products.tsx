@@ -2,6 +2,7 @@ import { Link } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 
 import { PageMeta } from '@/components/PageMeta'
+import { Button } from '@/components/ui/button'
 import SectionHeader from '../components/SectionHeader.tsx'
 import {
   packagingOptions,
@@ -96,12 +97,13 @@ export default function Products() {
               className="aspect-[3/2] w-full object-cover"
             />
           </div>
-          <Link
-            to="/bulk-orders"
-            className="mt-6 inline-block rounded-full bg-amber-400 px-6 py-2.5 text-sm font-semibold text-emerald-950"
+          <Button
+            asChild
+            size="lg"
+            className="mt-6 h-11 rounded-full bg-amber-400 px-6 text-emerald-950 hover:bg-amber-400/90"
           >
-            {t('cta.requestBulkQuote')}
-          </Link>
+            <Link to="/bulk-orders">{t('cta.requestBulkQuote')}</Link>
+          </Button>
         </div>
       </div>
     </div>

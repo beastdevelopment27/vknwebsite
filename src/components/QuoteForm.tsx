@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next'
 
-const inputClass =
-  'mt-2 w-full rounded-xl border border-white/10 bg-black/25 px-4 py-2.5 text-sm text-white outline-none placeholder:text-white/35 transition-colors focus:border-amber-400/50'
-const labelClass = 'text-sm font-medium text-white/80'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
 
 type QuoteFormProps = {
   compact?: boolean
@@ -26,80 +27,87 @@ export default function QuoteForm({ compact = false, submitLabel }: QuoteFormPro
       )}
 
       <div className={`grid grid-cols-1 gap-4 ${compact ? 'mt-0' : 'mt-5'} sm:grid-cols-2`}>
-        <label className={labelClass}>
-          {t('form.name')}
-          <input
+        <div className="space-y-2">
+          <Label htmlFor="quote-name">{t('form.name')}</Label>
+          <Input
+            id="quote-name"
             type="text"
             name="name"
             placeholder={t('form.namePlaceholder')}
-            className={inputClass}
+            className="h-10 border-white/10 bg-black/25"
             required
             autoComplete="name"
           />
-        </label>
-        <label className={labelClass}>
-          {t('form.companyName')}
-          <input
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="quote-company">{t('form.companyName')}</Label>
+          <Input
+            id="quote-company"
             type="text"
             name="company"
             placeholder={t('form.companyPlaceholder')}
-            className={inputClass}
+            className="h-10 border-white/10 bg-black/25"
             autoComplete="organization"
           />
-        </label>
+        </div>
       </div>
 
       <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <label className={labelClass}>
-          {t('form.phone')}
-          <input
+        <div className="space-y-2">
+          <Label htmlFor="quote-phone">{t('form.phone')}</Label>
+          <Input
+            id="quote-phone"
             type="tel"
             name="phone"
             placeholder={t('form.phonePlaceholder')}
-            className={inputClass}
+            className="h-10 border-white/10 bg-black/25"
             required
             autoComplete="tel"
           />
-        </label>
-        <label className={labelClass}>
-          {t('form.email')}
-          <input
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="quote-email">{t('form.email')}</Label>
+          <Input
+            id="quote-email"
             type="email"
             name="email"
             placeholder={t('form.emailPlaceholder')}
-            className={inputClass}
+            className="h-10 border-white/10 bg-black/25"
             autoComplete="email"
           />
-        </label>
+        </div>
       </div>
 
-      <label className={`${labelClass} mt-4 block`}>
-        {t('form.quantity')}
-        <input
+      <div className="mt-4 space-y-2">
+        <Label htmlFor="quote-quantity">{t('form.quantity')}</Label>
+        <Input
+          id="quote-quantity"
           type="text"
           name="quantity"
           placeholder={t('form.quantityPlaceholder')}
-          className={inputClass}
+          className="h-10 border-white/10 bg-black/25"
           required
         />
-      </label>
+      </div>
 
-      <label className={`${labelClass} mt-4 block`}>
-        {t('form.message')}
-        <textarea
+      <div className="mt-4 space-y-2">
+        <Label htmlFor="quote-message">{t('form.message')}</Label>
+        <Textarea
+          id="quote-message"
           name="message"
           rows={compact ? 3 : 4}
           placeholder={t('form.messagePlaceholder')}
-          className={`${inputClass} resize-none`}
+          className="min-h-24 resize-none border-white/10 bg-black/25"
         />
-      </label>
+      </div>
 
-      <button
+      <Button
         type="submit"
-        className="mt-5 w-full rounded-full bg-amber-400 px-6 py-3 text-sm font-medium text-emerald-950 transition-opacity hover:opacity-90"
+        size="lg"
+        className="mt-5 h-11 w-full rounded-full bg-amber-400 text-emerald-950 hover:bg-amber-400/90"
       >
         {submitLabel ?? t('cta.submitEnquiry')}
-      </button>
+      </Button>
     </form>
   )
 }
