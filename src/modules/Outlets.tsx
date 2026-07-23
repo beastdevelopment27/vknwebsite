@@ -44,13 +44,13 @@ export default function Outlets() {
         ))}
       </div>
 
-      <div className="mt-6 space-y-5 sm:mt-8">
+      <div className="mx-auto mt-6 w-full max-w-3xl sm:mt-8">
         {facilities.map((facility) => (
           <article
             key={facility.name}
-            className="overflow-hidden rounded-xl border border-white/10 bg-white/5 sm:rounded-2xl lg:grid lg:grid-cols-2"
+            className="overflow-hidden rounded-xl border border-white/10 bg-white/5 sm:rounded-2xl"
           >
-            <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[280px]">
+            <div className="relative aspect-[2/1] sm:aspect-[21/9]">
               <img
                 src={facility.image}
                 alt={facility.name}
@@ -59,11 +59,13 @@ export default function Outlets() {
                 loading="lazy"
                 className="h-full w-full object-cover"
               />
-              <span className="absolute left-3 top-3 rounded-full border border-white/20 bg-black/60 px-2.5 py-0.5 text-[10px] text-white sm:left-4 sm:top-4 sm:px-3 sm:py-1 sm:text-xs">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <span className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-white/20 bg-black/60 px-3 py-1 text-[10px] text-white sm:bottom-4 sm:text-xs">
                 {facility.name}
               </span>
             </div>
-            <div className="p-4 sm:p-5 lg:flex lg:flex-col lg:justify-center">
+
+            <div className="mx-auto max-w-xl px-4 py-5 text-center sm:px-6 sm:py-6">
               <p className="text-[10px] font-semibold uppercase tracking-wider text-amber-400 sm:text-xs">
                 {t('facilities.purpose')}
               </p>
@@ -74,22 +76,22 @@ export default function Outlets() {
                 {t(facility.descKey)}
               </p>
 
-              <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-3.5 sm:gap-2">
-                <span className="rounded-full bg-black/40 px-2.5 py-0.5 text-[10px] text-white/80 sm:px-3 sm:py-1 sm:text-xs">
+              <div className="mt-3 flex flex-wrap justify-center gap-1.5 sm:mt-4 sm:gap-2">
+                <span className="rounded-full border border-white/10 bg-black/40 px-2.5 py-0.5 text-[10px] text-white/80 sm:px-3 sm:py-1 sm:text-xs">
                   {t('facilities.capacity')}: {facility.capacity}
                 </span>
-                <span className="rounded-full bg-black/40 px-2.5 py-0.5 text-[10px] text-white/80 sm:px-3 sm:py-1 sm:text-xs">
+                <span className="rounded-full border border-white/10 bg-black/40 px-2.5 py-0.5 text-[10px] text-white/80 sm:px-3 sm:py-1 sm:text-xs">
                   {facility.area}
                 </span>
               </div>
 
-              <p className="mt-3 text-[10px] font-semibold uppercase tracking-wider text-white/50 sm:mt-3.5 sm:text-xs">
+              <p className="mt-4 text-[10px] font-semibold uppercase tracking-wider text-white/50 sm:mt-5 sm:text-xs">
                 {t('facilities.infrastructure')}
               </p>
-              <ul className="mt-1.5 grid grid-cols-2 gap-1.5 sm:mt-2 sm:grid-cols-3 sm:gap-2">
+              <ul className="mt-2 grid grid-cols-2 justify-items-center gap-x-4 gap-y-1.5 sm:mt-2.5 sm:grid-cols-3 sm:gap-y-2">
                 {facility.infrastructureKeys.map((key) => (
-                  <li key={key} className="text-[10px] text-white/60 sm:text-xs">
-                    &#8226; {t(key)}
+                  <li key={key} className="text-[10px] text-white/70 sm:text-xs">
+                    {t(key)}
                   </li>
                 ))}
               </ul>
